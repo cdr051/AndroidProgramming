@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <!-- 닫기 버튼 -->
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:src="@drawable/close_icon"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"/>
+
+    <!-- 체크 + 가입완료 텍스트 -->
+    <LinearLayout
+        android:id="@+id/center_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/img_check"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/check_icon"/>
+
+        <TextView
+            android:id="@+id/tv_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가입 완료"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <!-- 홈으로 돌아가기 버튼 -->
+    <Button
+        android:id="@+id/btn_go_home"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="홈으로 돌아가기"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="@drawable/btn_gray_round"
+        android:backgroundTint="@null"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"/>
+</RelativeLayout>

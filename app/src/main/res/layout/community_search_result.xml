@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 뒤로가기 + 타이틀 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:src="@drawable/back_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:text="COSPICKER"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- 검색어 -->
+    <TextView
+        android:id="@+id/txtKeyword"
+        android:text=""
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- 필터(글유형/태그) -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/spinnerType"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spinnerTag"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- 카테고리 칩 -->
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPlanner"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="플래너" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPopular"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="인기" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipHotel"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="숙소" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipFood"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="맛집" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- 검색 결과 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerSearch"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

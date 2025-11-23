@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 상단바: 뒤로가기 + 제목 + 완료 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:src="@drawable/back_icon"
+                android:layout_width="28dp"
+                android:layout_height="28dp" />
+
+            <TextView
+                android:text="글쓰기"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/btnSubmit"
+                android:text="완료"
+                android:textStyle="bold"
+                android:textColor="#296044"
+                android:textSize="16sp"
+                android:padding="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <!-- 글 유형 -->
+        <Spinner
+            android:id="@+id/spinnerPostType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
+
+
+        <!-- 제목 -->
+        <EditText
+            android:id="@+id/editTitle"
+            android:hint="제목을 입력하세요"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <!-- 내용 -->
+        <EditText
+            android:id="@+id/editContent"
+            android:hint="내용을 입력하세요"
+            android:minLines="6"
+            android:gravity="top"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <!-- 사진/위치/태그 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/btnPhoto"
+                android:src="@drawable/photo_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="6dp"
+                android:layout_marginEnd="20dp"/>
+
+            <ImageView
+                android:id="@+id/btnLocation"
+                android:src="@drawable/location_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="6dp"
+                android:layout_marginEnd="20dp"/>
+
+            <ImageView
+                android:id="@+id/btnTag"
+                android:src="@drawable/tag_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="6dp" />
+        </LinearLayout>
+
+
+        <!-- 선택한 사진 미리보기 -->
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="12dp"
+            android:background="#EFEFEF" />
+
+        <!-- 선택된 위치 -->
+        <TextView
+            android:id="@+id/txtLocation"
+            android:text="위치: 선택 안됨"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:textColor="#444"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtTag"
+            android:text="태그: 선택 안됨"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:textColor="#444"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+</ScrollView>

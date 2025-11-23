@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- 상단바 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="8dp">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/back_icon" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="COSPICKER"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+        </LinearLayout>
+
+        <!-- SIGN UP 텍스트 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginVertical="20dp"/>
+
+        <!-- 입력 박스 -->
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="이메일"
+            android:padding="12dp"
+            android:background="@drawable/edit_box" />
+
+        <EditText
+            android:id="@+id/edt_pw"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:background="@drawable/edit_box"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/edt_pw_check"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="비밀번호 재입력"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:background="@drawable/edit_box"
+            android:layout_marginTop="12dp" />
+
+        <!-- 로그인 버튼 -->
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="로그인"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
+            android:textSize="16sp"
+            android:layout_marginTop="22dp"/>
+
+        <!-- 회원가입 버튼 -->
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="회원가입"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- 또는 문구 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E0E0E0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="또는"
+                android:textColor="#808080"
+                android:paddingHorizontal="10dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E0E0E0"/>
+        </LinearLayout>
+
+        <!-- 하단 약관 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="계속을 클릭하면 당사의 서비스 이용 약관 및 개인정보 처리방침에 동의하는 것으로 간주됩니다."
+            android:textSize="12sp"
+            android:textColor="#808080"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:layout_marginBottom="40dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

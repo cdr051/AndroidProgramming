@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="start"
+    android:padding="5dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/txtMessage"
+        android:background="@drawable/bg_other_message"
+        android:padding="10dp"
+        android:text="안녕하세요!"
+        android:textColor="#000"/>
+</LinearLayout>

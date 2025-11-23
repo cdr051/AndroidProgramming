@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <!-- 닫기 버튼 -->
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:src="@drawable/close_icon"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"/>
+
+    <!-- 타이틀 -->
+    <TextView
+        android:id="@+id/title_edit_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="휴대폰 번호를\n입력해주세요"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"/>
+
+    <!-- 전화번호 입력 + 전송하기 버튼 -->
+    <LinearLayout
+        android:id="@+id/phone_input_row"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@id/title_edit_phone"
+        android:layout_marginTop="25dp">
+
+        <!-- 입력창 -->
+        <LinearLayout
+            android:id="@+id/phone_input_box"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/rounded_edittext_bg"
+            android:paddingHorizontal="16dp">
+
+            <EditText
+                android:id="@+id/edit_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="010-0000-0000"
+                android:textSize="16sp"
+                android:background="@android:color/transparent"
+                android:inputType="phone"/>
+        </LinearLayout>
+
+        <!-- 전송하기 버튼 -->
+        <TextView
+            android:id="@+id/btn_send_code"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="전송"
+            android:textSize="14sp"
+            android:textColor="#406EFF"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+    <!-- 인증번호 라벨 -->
+    <TextView
+        android:id="@+id/tv_auth_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="인증 번호"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:layout_below="@id/phone_input_row"
+        android:layout_marginTop="20dp"/>
+
+    <!-- 인증번호 입력 박스 -->
+    <LinearLayout
+        android:id="@+id/auth_input_box"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_edittext_bg"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:layout_below="@id/tv_auth_label"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/edit_auth"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:hint="인증 번호 4자리"
+            android:textSize="16sp"
+            android:inputType="number"
+            android:maxLength="4"
+            android:background="@android:color/transparent"/>
+
+        <TextView
+            android:id="@+id/tv_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="#FF3B30"
+            android:textSize="14sp"
+            android:paddingLeft="6dp"/>
+    </LinearLayout>
+
+    <!-- 재전송 버튼 -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_resend"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/tv_auth_label"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentEnd="true"
+        android:text="재전송"
+        android:textColor="#000000"
+        android:background="@drawable/btn_gray_round"
+        android:backgroundTint="@null"/>
+
+    <!-- 안내 문구 -->
+    <TextView
+        android:id="@+id/tv_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="입력 시간이 초과되었어요. 인증 번호를 재전송해주세요."
+        android:textSize="12sp"
+        android:textColor="#777777"
+        android:layout_below="@id/auth_input_box"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"/>
+
+    <!-- 완료 버튼 -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_done"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="완료"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:background="@drawable/btn_gray_round"
+        android:backgroundTint="@null"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"/>
+</RelativeLayout>

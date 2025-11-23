@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 뒤로가기 -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:src="@drawable/back_icon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="4dp" />
+
+        <!-- 제목 -->
+        <TextView
+            android:id="@+id/txtTitle"
+            android:text="COSPICKER"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+
+        <!-- 탭: 숙소/맛집 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <!-- 숙소 -->
+            <LinearLayout
+                android:id="@+id/tab_stay"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iconStay"
+                    android:src="@drawable/stay_black"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:id="@+id/txtStay"
+                    android:text="숙소"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+
+            <!-- 맛집 -->
+            <LinearLayout
+                android:id="@+id/tab_food"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iconFood"
+                    android:src="@drawable/food_gray"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:id="@+id/txtFood"
+                    android:text="맛집"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 검색창 -->
+        <LinearLayout
+            android:id="@+id/layoutSearch"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical"
+            android:background="#EDECEC"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:src="@drawable/search_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+
+            <EditText
+                android:id="@+id/edtSearch"
+                android:hint="여행지 검색"
+                android:textSize="15sp"
+                android:background="@android:color/transparent"
+                android:paddingStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- 날짜/인원 -->
+        <LinearLayout
+            android:id="@+id/btnDatePeople"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical"
+            android:background="#EDECEC"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:src="@drawable/calendar_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:text="날짜 선택"
+                android:textSize="15sp"
+                android:layout_marginStart="12dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:src="@drawable/profile_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/txtPeople"
+                android:text="인원"
+                android:textSize="15sp"
+                android:layout_marginStart="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- 최근 검색 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="28dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtStayRecent"
+                android:text="최근 검색"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txtClearAll"
+                android:text="전체 삭제"
+                android:textColor="#8E8E8E"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- 태그 -->
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/container_recent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:flexWrap="wrap"
+            app:justifyContent="flex_start"
+            app:flexDirection="row" />
+
+    </LinearLayout>
+</ScrollView>

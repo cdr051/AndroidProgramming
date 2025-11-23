@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:id="@+id/scroll_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_nav"
+        android:scrollbarStyle="outsideOverlay"
+        android:clipToPadding="false"
+        android:paddingBottom="0dp"> <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COSPICKER"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="#F5F5F5"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/menu_icon"
+                android:contentDescription="메뉴 아이콘" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:hint="검색어를 입력하세요"
+                android:textColor="#808080"
+                android:textSize="14sp"
+                android:background="@android:color/transparent"
+                android:maxLines="1"
+                android:imeOptions="actionSearch"
+                android:inputType="text" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/search_icon"
+                android:contentDescription="검색 아이콘" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:id="@+id/nav_stay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/home_icon"
+                    android:contentDescription="숙소 아이콘" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="숙소"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/store_icon"
+                    android:contentDescription="맛집 아이콘" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="맛집"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nav_community"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/community_icon"
+                    android:contentDescription="커뮤니티 아이콘" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="커뮤니티"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="최근 본 숙소 >"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_recent"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ooo님 근처 숙소 >"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_near_hotel"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="근처 맛집 >"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_near_food"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+    </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#F0F0F0"
+        android:layout_alignParentBottom="true"
+        android:elevation="10dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <LinearLayout
+            android:id="@+id/nav_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/home_icon2"
+                app:tint="#000000"
+                android:contentDescription="홈" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="홈"
+                android:textSize="12sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/wish_icon"
+                app:tint="#000000"
+                android:contentDescription="위시 리스트" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="위시"
+                android:textSize="12sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/location_icon"
+                app:tint="#000000"
+                android:contentDescription="주변 검색" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주변"
+                android:textSize="12sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_message"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/message_icon"
+                app:tint="#000000"
+                android:contentDescription="메시지" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="메시지"
+                android:textSize="12sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/profile_icon"
+                app:tint="#000000"
+                android:contentDescription="프로필" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="프로필"
+                android:textSize="12sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

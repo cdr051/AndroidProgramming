@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- 제목 -->
+    <TextView
+        android:id="@+id/txtDialogTitle"
+        android:text="날짜 및 인원 선택"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- 날짜 선택 버튼 (➜ DatePickerDialog 열림) -->
+    <TextView
+        android:id="@+id/btnSelectDate"
+        android:text="📅 날짜 선택"
+        android:textSize="16sp"
+        android:padding="14dp"
+        android:background="#EEEEEE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- 선택된 날짜 표시 -->
+    <TextView
+        android:id="@+id/txtSelectedDate"
+        android:text="날짜 미지정"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- 인원 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtPeopleTitle"
+            android:text="인원 1"
+            android:textSize="16sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/btnMinus"
+            android:text="-"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:background="#DDDDDD"
+            android:layout_marginEnd="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/txtPeopleCount"
+            android:text="1"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/btnPlus"
+            android:text="+"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:background="#DDDDDD"
+            android:layout_marginStart="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+
+    <!-- 적용 버튼 -->
+    <Button
+        android:id="@+id/btnApply"
+        android:text="적용"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

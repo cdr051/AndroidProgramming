@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- 상단바 -->
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:paddingHorizontal="16dp">
+
+        <!-- 왼쪽 공간(정렬용) -->
+        <View
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true" />
+
+        <!-- 가운데 커뮤니티 아이콘 + 글자 -->
+        <LinearLayout
+            android:id="@+id/center_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/icon_community"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/community_icon"
+                android:layout_marginBottom="2dp" />
+
+            <TextView
+                android:id="@+id/title_community"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="커뮤니티"
+                android:textSize="10sp"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- 메뉴 버튼 -->
+        <ImageView
+            android:id="@+id/btn_menu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/community_menu_icon"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+
+    <!-- 검색창 -->
+    <LinearLayout
+        android:id="@+id/search_box"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/top_bar"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/edit_box"
+        android:paddingHorizontal="12dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/search_icon" />
+
+        <EditText
+            android:id="@+id/edit_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="검색어를 입력하세요"
+            android:textSize="14sp"
+            android:background="@android:color/transparent"
+            android:paddingLeft="8dp"/>
+    </LinearLayout>
+
+
+    <!-- 게시글 리스트 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_post"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_box"
+        android:layout_above="@id/bottom_nav"
+        android:layout_marginBottom="70dp"
+        android:paddingBottom="10dp"/>
+
+
+    <!-- 글쓰기 버튼 -->
+    <TextView
+        android:id="@+id/btn_write"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:text="+ 글쓰기"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/btn_gray_round"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="90dp"
+        android:layout_alignParentBottom="true"/>
+
+
+    <!-- 하단 네비게이션 -->
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#F0F0F0"
+        android:layout_alignParentBottom="true"
+        android:elevation="10dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <!-- 홈 -->
+        <LinearLayout
+            android:id="@+id/nav_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/home_icon2"
+                app:tint="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="홈"
+                android:textSize="12sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <!-- 위시 -->
+        <LinearLayout
+            android:id="@+id/nav_wish"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/wish_icon"
+                app:tint="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="위시"
+                android:textSize="12sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <!-- 주변 -->
+        <LinearLayout
+            android:id="@+id/nav_location"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/location_icon"
+                app:tint="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주변"
+                android:textSize="12sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <!-- 메시지 -->
+        <LinearLayout
+            android:id="@+id/nav_message"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/message_icon"
+                app:tint="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="메시지"
+                android:textSize="12sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <!-- 프로필 -->
+        <LinearLayout
+            android:id="@+id/nav_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/profile_icon"
+                app:tint="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="프로필"
+                android:textSize="12sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

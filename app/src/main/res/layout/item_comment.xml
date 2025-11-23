@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:src="@drawable/profile_icon"
+        android:layout_width="36dp"
+        android:layout_height="36dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="닉네임"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="댓글 내용"
+            android:textSize="14sp"
+            android:layout_marginTop="2dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="방금 전"
+                android:textSize="12sp"
+                android:textColor="#999" />
+
+            <!-- 대댓글 버튼 -->
+            <TextView
+                android:id="@+id/tvReply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" · 답글"
+                android:textSize="12sp"
+                android:textColor="#406EFF"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ❤️ 좋아요 영역 -->
+    <LinearLayout
+        android:id="@+id/layoutLikeComment"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/btnLikeComment"
+            android:src="@drawable/heart_icon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/txtLikeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="12sp"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+
+    <!-- 삭제 버튼 -->
+    <ImageView
+        android:id="@+id/btnDelete"
+        android:src="@drawable/delete_icon"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:padding="4dp"
+        android:layout_marginStart="8dp" />
+
+</LinearLayout>

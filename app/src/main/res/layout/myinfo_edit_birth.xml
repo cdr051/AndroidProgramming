@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <!-- 닫기 버튼 -->
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:src="@drawable/close_icon"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"/>
+
+    <!-- 제목 -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="생년월일을 입력해주세요"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:textColor="#000000"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- 연도 / 월 / 일 선택박스 -->
+    <LinearLayout
+        android:id="@+id/layout_birth_picker"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="30dp">
+
+        <!-- 연도 -->
+        <LinearLayout
+            android:id="@+id/box_year"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_edittext_bg">
+
+            <TextView
+                android:id="@+id/tv_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2000년"
+                android:textColor="#777777"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- 간격 -->
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+
+        <!-- 월 -->
+        <LinearLayout
+            android:id="@+id/box_month"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_edittext_bg">
+
+            <TextView
+                android:id="@+id/tv_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0월"
+                android:textColor="#777777"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- 간격 -->
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+
+        <!-- 일 -->
+        <LinearLayout
+            android:id="@+id/box_day"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_edittext_bg">
+
+            <TextView
+                android:id="@+id/tv_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00일"
+                android:textColor="#777777"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 저장 버튼 -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="저장"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:background="@drawable/btn_gray_round"
+        android:backgroundTint="@null"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"/>
+
+</RelativeLayout>

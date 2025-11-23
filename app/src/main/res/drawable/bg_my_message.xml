@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- 배경색 (너가 잘 쓰는 민트톤) -->
+    <solid android:color="#ACEED6" />
+
+    <!-- 패딩 -->
+    <padding
+        android:left="15dp"
+        android:top="10dp"
+        android:right="15dp"
+        android:bottom="10dp" />
+
+    <!-- 말풍선 모양을 위한 모서리 -->
+    <corners
+        android:topLeftRadius="16dp"
+        android:topRightRadius="16dp"
+        android:bottomLeftRadius="16dp"
+        android:bottomRightRadius="2dp" />
+
+</shape>

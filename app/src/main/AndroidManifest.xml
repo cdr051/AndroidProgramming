@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Cospicker"
+        tools:targetApi="31">
+
+        <!-- ⭐ Splash 화면 -->
+        <activity
+            android:name=".splash.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Cospicker">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- ⭐ 홈 -->
+        <activity
+            android:name=".home.HomeActivity"
+            android:exported="true" />
+
+        <!-- ⭐ 숙소 검색 화면 -->
+        <activity
+            android:name=".stay.search.StaySearchActivity" />
+        <activity android:name=".stay.search.StaySearchResultActivity" />
+        <activity android:name=".stay.search.StayListActivity"/>
+        <activity android:name=".stay.search.StayDetailActivity"/>
+
+
+
+        <!-- ⭐ 로그인 / 회원가입 -->
+        <activity android:name=".auth.LoginIntroActivity" />
+        <activity android:name=".auth.SignupActivity" />
+        <activity android:name=".auth.ProfileRegisterActivity" />
+        <activity android:name=".auth.SignupCompleteActivity" />
+
+        <!-- ⭐ 마이페이지 -->
+        <activity android:name=".myinfo.ProfileActivity" />
+        <activity android:name=".myinfo.MyInfoActivity" />
+        <activity android:name=".myinfo.EditNicknameActivity" />
+        <activity android:name=".myinfo.EditNameActivity" />
+        <activity android:name=".myinfo.EditPhoneActivity" />
+        <activity android:name=".myinfo.EditBirthActivity" />
+        <activity android:name=".myinfo.EditGenderActivity" />
+        <activity android:name=".myinfo.EditPasswordActivity" />
+
+        <!-- ⭐ 내 글 / 댓글 / 알림 -->
+        <activity android:name=".myinfo.MyPostsActivity" />
+        <activity android:name=".myinfo.MyCommentsActivity" />
+        <activity android:name=".myinfo.NotificationListActivity" />
+
+        <!-- ⭐ 공지사항 -->
+        <activity android:name=".notice.NoticeListActivity" />
+        <activity android:name=".notice.NoticeDetailActivity" />
+
+        <!-- ⭐ 커뮤니티 -->
+        <activity android:name=".community.CommunityActivity" />
+        <activity android:name=".community.CommunitySearchActivity" />
+        <activity android:name=".community.CommunitySearchResultActivity" />
+        <activity android:name=".community.CommunityWritePostActivity" />
+        <activity android:name=".community.CommunityPostDetailActivity" />
+
+        <!-- ⭐ 채팅 -->
+        <activity android:name=".chat.ChatListActivity" />
+        <activity android:name=".chat.ChatRoomActivity" />
+
+    </application>
+
+</manifest>

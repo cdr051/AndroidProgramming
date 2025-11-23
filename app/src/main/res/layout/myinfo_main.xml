@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ⭐ 상단바 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/back_icon" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="COSPICKER"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <View
+                android:layout_width="22dp"
+                android:layout_height="22dp" />
+        </LinearLayout>
+
+        <!-- 구분선 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD" />
+
+        <!-- ⭐ 프로필 영역 (닉네임) -->
+        <LinearLayout
+            android:id="@+id/row_profile"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/profile_icon"/>
+
+            <TextView
+                android:id="@+id/info_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="닉네임"
+                android:textSize="18sp"
+                android:layout_marginLeft="12dp" />
+        </LinearLayout>
+
+        <!-- 회색 배경 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#F5F5F5" />
+
+        <!-- ⭐ 회원 정보 구역 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원 정보"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <!-- 이름 -->
+        <LinearLayout
+            android:id="@+id/row_name"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="이름"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/info_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름"
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:layout_marginRight="6dp"/>
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/arrow_icon"/>
+        </LinearLayout>
+
+        <!-- 휴대폰 번호 -->
+        <LinearLayout
+            android:id="@+id/row_phone"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="휴대폰 번호"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/info_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="휴대폰 번호"
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:layout_marginRight="6dp"/>
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/arrow_icon"/>
+        </LinearLayout>
+
+        <!-- 생년월일 -->
+        <LinearLayout
+            android:id="@+id/row_birth"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="생년월일"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/info_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="생년월일"
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:layout_marginRight="6dp"/>
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/arrow_icon"/>
+        </LinearLayout>
+
+        <!-- 성별 -->
+        <LinearLayout
+            android:id="@+id/row_gender"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="성별"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/info_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="성별"
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:layout_marginRight="6dp"/>
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/arrow_icon"/>
+        </LinearLayout>
+
+        <!-- 회색 배경 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#F5F5F5"/>
+
+        <!-- ⭐ 계정 보안 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="계정 보안"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <!-- 비밀번호 변경 -->
+        <LinearLayout
+            android:id="@+id/row_reset_pw"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="비밀번호 변경"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/arrow_icon"/>
+
+
+        </LinearLayout>
+        <!-- ⭐ 접속 기기 관리 -->
+        <LinearLayout
+            android:id="@+id/row_device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="접속 기기 관리"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/btn_logout_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="전체 로그아웃"
+                    android:textColor="#406EFF"
+                    android:textStyle="bold"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="로그인 된 모든 기기에서 로그아웃 됩니다."
+                android:textColor="#999999"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- 회색 라인 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#F5F5F5" />
+
+
+        <!-- 회색 배경 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#F5F5F5"/>
+
+        <!-- ⭐ 회원 탈퇴 -->
+        <TextView
+            android:id="@+id/btn_withdraw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회원탈퇴"
+            android:textSize="15sp"
+            android:textColor="#CC0000"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="16dp"/>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme -->
+    <style name="Base.Theme.Cospicker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- 커스텀 가능 -->
+    </style>
+
+    <style name="Theme.Cospicker" parent="Base.Theme.Cospicker" />
+
+</resources>

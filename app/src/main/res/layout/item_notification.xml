@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="#FFFFFF">
+
+    <!-- 왼쪽 동그라미 아이콘 (읽음/안읽음 표시용) -->
+    <View
+        android:id="@+id/viewDot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/notify_dot_unread" />
+
+    <!-- 내용 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="내 글에 댓글이 달렸습니다."
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="방금 전"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+</LinearLayout>

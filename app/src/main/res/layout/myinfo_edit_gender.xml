@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#FFFFFF">
+
+    <!-- 닫기 버튼 -->
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:src="@drawable/close_icon"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"/>
+
+    <!-- 타이틀 -->
+    <TextView
+        android:id="@+id/tv_title_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="성별을 선택해주세요"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"/>
+
+    <!-- 라디오 버튼 그룹 -->
+    <RadioGroup
+        android:id="@+id/radio_group_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/tv_title_gender"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp">
+
+        <!-- 남성 -->
+        <RadioButton
+            android:id="@+id/radio_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="남성"
+            android:textSize="18sp"
+            android:buttonTint="#406EFF"
+            android:paddingEnd="30dp"/>
+
+        <!-- 여성 -->
+        <RadioButton
+            android:id="@+id/radio_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="여성"
+            android:textSize="18sp"
+            android:buttonTint="#406EFF"/>
+    </RadioGroup>
+
+    <!-- 저장 버튼 -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_save_gender"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="저장"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:background="@drawable/btn_gray_round"
+        android:backgroundTint="@null"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"/>
+</RelativeLayout>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false">
+
+        <!-- 상단 (뒤로가기 + 옵션) -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:src="@drawable/back_icon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:padding="4dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="1dp"/>
+
+            <ImageView
+                android:id="@+id/btnMenu"
+                android:src="@drawable/community_menu_icon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:padding="4dp"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+
+
+        <!-- 카테고리 -->
+        <TextView
+            android:id="@+id/txtCategory"
+            android:text="일반글"
+            android:textSize="12sp"
+            android:background="@drawable/btn_gray_round"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:textColor="#555"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <!-- 프로필 + 닉네임 + 시간 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false">
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/profile_icon" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginStart="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtNickname"
+                    android:text="닉네임"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:text="10분전"
+                android:textSize="12sp"
+                android:textColor="#777"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <!-- 제목 -->
+        <TextView
+            android:id="@+id/txtTitle"
+            android:text="게시글 제목"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 내용 -->
+        <TextView
+            android:id="@+id/txtContent"
+            android:text="게시글 내용입니다."
+            android:textSize="15sp"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <!-- 태그 -->
+        <TextView
+            android:id="@+id/txtTag"
+            android:text="# 태그"
+            android:textSize="13sp"
+            android:textColor="#777"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <!-- 좋아요 + 채팅 아이콘 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false">
+
+            <!-- 좋아요 버튼 -->
+            <ImageView
+                android:id="@+id/btnLike"
+                android:src="@drawable/heart_icon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:padding="4dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <!-- 좋아요 수 -->
+            <TextView
+                android:id="@+id/txtLike"
+                android:text="10"
+                android:textSize="14sp"
+                android:textColor="#555"
+                android:layout_marginStart="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!-- 채팅 아이콘 -->
+            <ImageView
+                android:id="@+id/imgChat"
+                android:src="@drawable/chat_icon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:padding="4dp"
+                android:layout_marginStart="16dp"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+
+
+        <!-- 댓글 개수 표시 -->
+        <TextView
+            android:id="@+id/txtCommentCount"
+            android:text="댓글 1"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <!-- 댓글 리스트 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"/>
+
+
+        <!-- 댓글 입력창 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F9F9F9">
+
+            <EditText
+                android:id="@+id/editComment"
+                android:hint="댓글을 입력하세요"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/btnSendComment"
+                android:text="완료"
+                android:textColor="#296044"
+                android:textStyle="bold"
+                android:paddingHorizontal="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
