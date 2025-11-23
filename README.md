@@ -114,8 +114,67 @@ com.example.cospicker
         ├── StaySearchResultActivity     // 검색 결과 목록  
         ├── StayListActivity             // 필터 적용된 리스트  
         ├── StayDetailActivity           // 숙소 상세  
-        └── StayDatePeopleBottomSheet    // 날짜 + 인원 선택 BottomSheet  
+        └── StayDatePeopleBottomSheet    // 날짜 + 인원 선택 BottomSheet
+
+
 
 ```
+```plaintext
+res/layout
+│
+├── auth_login_intro.xml                 // 로그인/회원가입 인트로
+├── auth_profile_register.xml            // 프로필 기본 정보 등록
+├── auth_signup.xml                      // 회원가입 입력
+├── auth_signup_complete.xml             // 회원가입 완료
+│
+├── bottom_date_people.xml               // 숙소 날짜/인원 BottomSheet
+├── comment_edit_dialog.xml              // 댓글 수정 다이얼로그
+├── dialog_number_picker.xml             // 숫자 선택 다이얼로그
+│
+│── chat_list.xml                        // 채팅방 목록
+├── chat_room.xml                        // 채팅방 내부 UI
+├── item_chat_room.xml                   // 채팅방 리스트 아이템
+├── item_message_me.xml                  // 내가 보낸 메시지
+├── item_message_other.xml               // 상대가 보낸 메시지
+│
+├── community_main.xml                   // 커뮤니티 메인
+├── community_post_detail.xml            // 게시글 상세 + 댓글
+├── community_write_post.xml             // 글쓰기
+├── community_edit_post.xml              // 게시글 수정
+├── community_search.xml                 // 커뮤니티 검색창
+├── community_search_result.xml          // 검색 결과 리스트
+├── item_post.xml                        // 게시글 리스트 아이템
+├── item_comment.xml                     // 댓글 아이템
+├── item_my_comment.xml                  // 내가 쓴 댓글 아이템
+│
+├── home_main.xml                        // 홈 화면
+│
+├── myinfo_main.xml                      // 마이페이지 메인
+├── myinfo_profile.xml                   // 프로필 보기/설정
+├── myinfo_edit_name.xml                 // 이름 수정
+├── myinfo_edit_gender.xml               // 성별 수정
+├── myinfo_edit_birth.xml                // 생년월일 수정
+├── myinfo_edit_phone.xml                // 전화번호 수정
+├── myinfo_edit_password.xml             // 비밀번호 변경
+├── myinfo_logout.xml                    // 로그아웃
+├── myinfo_my_posts.xml                  // 내가 쓴 글 목록
+├── myinfo_my_comments.xml               // 내가 쓴 댓글 목록
+├── myinfo_notifications.xml             // 알림 리스트
+├── item_notification.xml                // 알림 아이템
+├── notification_item.xml                // 알림 아이템 (중복 UI)
+│
+├── notice_list.xml                      // 공지사항 리스트
+├── notice_detail.xml                    // 공지 상세
+├── item_notice.xml                      // 공지 리스트 아이템
+│
+├── splash_main.xml                      // 스플래시 화면
+│
+├── stay_search.xml                      // 숙소 검색창
+├── stay_search_result.xml               // 숙소 검색 결과
+├── stay_list.xml                        // 숙소 리스트
+├── stay_detail.xml                      // 숙소 상세 페이지
+├── item_stay.xml                        // 숙소 아이템
+│
+└── 추가 예정 (개발 미완성)
 
-
+```
