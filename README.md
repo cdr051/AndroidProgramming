@@ -13,7 +13,7 @@ Cospicker는 여행 숙소와 맛집 검색, 그리고 커뮤니티 기능을 �
 --------------
 ▪ 프론트엔드
 
-팀장 : 김선욱
+팀장 : 김선욱 
 
 팀원 : 권오현
 
@@ -37,11 +37,23 @@ IDE : Android Studio
 
 주요 기능
 ---------------------
+🔐 회원가입 및 로그인 (Firebase)
 
+🏨 숙소 검색 및 필터링
 
+🍽 맛집 검색 기능
 
+💬 커뮤니티 글 작성 / 댓글
 
-📂 Cospicker 프로젝트 구조
+🔔 알림 기능
+
+👤 마이페이지 (내 정보 · 작성글 · 댓글 관리)
+
+💾 이미지 업로드 및 조회
+
+<<flutter 적용 전>> 
+<<Android 버전>>
+📂 Cospicker 프로젝트 구조 <Kotlin 버전> 
 --------------------------
 ```plaintext
 
@@ -179,4 +191,6 @@ res/layout
 
 ```
 
+------------------
+<flutter dart 버전 업데이트 변경 git commit 위치 변경>
 플러터 이용 Dart 버전 ---> https://github.com/songjiheon/Cospicker_Flutter
